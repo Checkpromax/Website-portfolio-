@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vishwas | UI/UX Designer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      @keyframes logo-fade-in {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      .animate-logo-fade-in {
+        animation: logo-fade-in 1s ease-out forwards;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              heading: ['Poppins', 'sans-serif'],
+              body: ['Nunito', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: '#4F46E5',
+                '50': '#EEF2FF',
+                '100': '#E0E7FF',
+                '200': '#C7D2FE',
+                '300': '#A5B4FC',
+                '400': '#818CF8',
+                '500': '#6366F1',
+                '600': '#4F46E5',
+                '700': '#4338CA',
+                '800': '#3730A3',
+                '900': '#312E81',
+                '950': '#1E1B4B'
+              }
+            },
+            animation: {
+              'float': 'float 3.5s ease-in-out infinite',
+              'fade-in': 'fade-in 0.8s ease-out forwards',
+              'fade-up': 'fade-up 0.8s ease-out forwards'
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-15px)' },
+              },
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              'fade-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-50 text-gray-800 font-body">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
